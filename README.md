@@ -58,7 +58,7 @@ BibTeX format:
           Falorsi, Luca and
           De Cao, Nicola and
           Thomas, Kipf and
-          M. Tomczak, Jakub},
+          Tomczak, Jakub M.},
   journal={arXiv preprint arXiv:},
   year={2018}
 }
