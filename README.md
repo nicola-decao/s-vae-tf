@@ -24,7 +24,7 @@ $ python setup.py install
 * [examples](https://github.com/nicola-decao/s-vae/tree/master/examples): Example code for using the library within a Tensorflow project
 
 ## Usage
-Please have a look into the [examples folder](s-vae/examples). We adapted our implementation to follow the structure of the recently proposed [Tensorflow Distribution library](https://www.tensorflow.org/api_docs/python/tf/distributions/Distribution), ([Dillon et al, 2017](https://arxiv.org/abs/1711.10604)).
+Please have a look into the [examples folder](https://github.com/nicola-decao/SVAE/tree/master/examples). We adapted our implementation to follow the structure of the recently proposed [Tensorflow Distribution library](https://www.tensorflow.org/api_docs/python/tf/distributions/Distribution), ([Dillon et al, 2017](https://arxiv.org/abs/1711.10604)).
 
 Please cite [[1](#citation)] in your work when using this library in your experiments.
 
@@ -38,7 +38,7 @@ To sample the von Mises-Fisher distribution we follow the rejection sampling pro
 _Note that as ![](http://latex.codecogs.com/svg.latex?%5Comega) is a scalar, this approach does not suffer from the curse of dimensionality. For the final transformation, ![](http://latex.codecogs.com/svg.latex?U%28%5Cmathbf%7Bz%7D%27%3B%5Cmu%29), a [Householder reflection](https://en.wikipedia.org/wiki/Householder_transformation) is utilized._
 
 ## Feedback
-For questions and comments, feel free to contact [Nicola De Cao](nicola.decao@gmail.com).
+For questions and comments, feel free to contact [Nicola De Cao](mailto:nicola.decao@gmail.com).
 
 ## License
 MIT
@@ -58,7 +58,7 @@ BibTeX format:
           Falorsi, Luca and
           De Cao, Nicola and
           Thomas, Kipf and
-          M. Tomczak, Jakub},
+          Tomczak, Jakub M.},
   journal={arXiv preprint arXiv:},
   year={2018}
 }
