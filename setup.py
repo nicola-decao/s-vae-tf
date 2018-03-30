@@ -14,6 +14,6 @@ setup(
     url='https://nicola-decao.github.io/s-vae/',
     download_url='https://github.com/nicola-decao/SVAE',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.md')).read(),
-    install_requires=['numpy', 'tensorflow>=1.6.0', 'scipy'],
+    install_requires=['numpy', 'tensorflow>=1.7.0', 'scipy'],
     packages=find_packages()
 )

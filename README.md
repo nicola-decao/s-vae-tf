@@ -6,8 +6,8 @@ This library contains a Tensorflow implementation of the hyperspherical variatio
 
 ## Dependencies
 
-* **python>=3.5**
-* **tensorflow>=1.6.0**: http://tensorflow.org
+* **python>=3.6**
+* **tensorflow>=1.7.0**: http://tensorflow.org
 * **scipy**: https://scipy.org
 
 ## Installation
