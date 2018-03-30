@@ -2,8 +2,8 @@
 import numpy as np
 import tensorflow as tf
 
-from svae.distributions import VonMisesFisher
-from svae.distributions import HypersphericalUniform
+from hyperspherical_vae.distributions import VonMisesFisher
+from hyperspherical_vae.distributions import HypersphericalUniform
 
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets('data/', one_hot=False)

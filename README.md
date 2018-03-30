@@ -19,9 +19,9 @@ $ python setup.py install
 ```
 
 ## Structure
-* [distributions](https://github.com/nicola-decao/SVAE/tree/master/svae/distributions): Tensorflow implementation of the von Mises-Fisher and hyperspherical Uniform distributions. Both inherit from `tf.distributions.Distribution`
-* [ops](https://github.com/nicola-decao/SVAE/tree/master/svae/ops): Low-level operations used for computing the exponentially scaled modified Bessel function of the first kind and its derivative.
-* [examples](https://github.com/nicola-decao/SVAE/tree/master/examples): Example code for using the library within a Tensorflow project
+* [distributions](https://github.com/nicola-decao/s-vae/tree/master/hyperspherical_vae/distributions): Tensorflow implementation of the von Mises-Fisher and hyperspherical Uniform distributions. Both inherit from `tf.distributions.Distribution`
+* [ops](https://github.com/nicola-decao/s-vae/tree/master/hyperspherical_vae/ops): Low-level operations used for computing the exponentially scaled modified Bessel function of the first kind and its derivative.
+* [examples](https://github.com/nicola-decao/s-vae/tree/master/examples): Example code for using the library within a Tensorflow project
 
 ## Usage
 Please have a look into the [examples folder](s-vae/examples). We adapted our implementation to follow the structure of the recently proposed [Tensorflow Distribution library](https://www.tensorflow.org/api_docs/python/tf/distributions/Distribution), ([Dillon et al, 2017](https://arxiv.org/abs/1711.10604)).

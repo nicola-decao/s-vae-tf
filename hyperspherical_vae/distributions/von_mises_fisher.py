@@ -38,8 +38,8 @@ from tensorflow.python.ops import linalg_ops
 from tensorflow.python.ops import nn_impl
 from tensorflow.python.ops.distributions.beta import Beta
 
-from svae.ops import ive
-from svae.distributions.hyperspherical_uniform import HypersphericalUniform
+from hyperspherical_vae.ops.ive import ive
+from hyperspherical_vae.distributions.hyperspherical_uniform import HypersphericalUniform
 
 __all__ = [
     "VonMisesFisher",
