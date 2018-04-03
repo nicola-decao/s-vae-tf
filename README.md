@@ -19,9 +19,9 @@ $ python setup.py install
 ```
 
 ## Structure
-* [distributions](https://github.com/nicola-decao/s-vae/tree/master/hyperspherical_vae/distributions): Tensorflow implementation of the von Mises-Fisher and hyperspherical Uniform distributions. Both inherit from `tf.distributions.Distribution`
+* [distributions](https://github.com/nicola-decao/s-vae/tree/master/hyperspherical_vae/distributions): Tensorflow implementation of the von Mises-Fisher and hyperspherical Uniform distributions. Both inherit from `tf.distributions.Distribution`.
 * [ops](https://github.com/nicola-decao/s-vae/tree/master/hyperspherical_vae/ops): Low-level operations used for computing the exponentially scaled modified Bessel function of the first kind and its derivative.
-* [examples](https://github.com/nicola-decao/s-vae/tree/master/examples): Example code for using the library within a Tensorflow project
+* [examples](https://github.com/nicola-decao/s-vae/tree/master/examples): Example code for using the library within a Tensorflow project.
 
 ## Usage
 Please have a look into the [examples folder](https://github.com/nicola-decao/SVAE/tree/master/examples). We adapted our implementation to follow the structure of the recently proposed [Tensorflow Distribution library](https://www.tensorflow.org/api_docs/python/tf/distributions/Distribution), ([Dillon et al, 2017](https://arxiv.org/abs/1711.10604)).
@@ -53,11 +53,11 @@ Auto-Encoders. arXiv.
 BibTeX format:
 ```
 @article{s-vae18,
-  title={{Hyperspherical Variational Auto-Encoders}},
+  title={Hyperspherical Variational Auto-Encoders},
   author={Davidson, Tim R. and
           Falorsi, Luca and
           De Cao, Nicola and
-          Thomas, Kipf and
+          Kipf, Thomas and
           Tomczak, Jakub M.},
   journal={arXiv preprint arXiv:},
   year={2018}
