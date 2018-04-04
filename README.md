@@ -2,7 +2,7 @@
 ### Tensorflow implementation of Hyperspherical Variational Auto-Encoders
 
 ## Overview
-This library contains a Tensorflow implementation of the hyperspherical variational auto-encoder, or S-VAE, as presented in [[1]](#citation)(link to our paper).
+This library contains a Tensorflow implementation of the hyperspherical variational auto-encoder, or S-VAE, as presented in [[1]](#citation)(http://arxiv.org/abs/1804.00891).
 
 ## Dependencies
 
@@ -47,7 +47,7 @@ MIT
 ```
 [1] Davidson, T. R., Falorsi, L., De Cao, N., Kipf, T.,
 and Tomczak, J. M. (2018). Hyperspherical Variational
-Auto-Encoders. arXiv.
+Auto-Encoders. arXiv preprint arXiv:1804.00891.
 ```
 
 BibTeX format:
@@ -59,7 +59,7 @@ BibTeX format:
           De Cao, Nicola and
           Kipf, Thomas and
           Tomczak, Jakub M.},
-  journal={arXiv preprint arXiv:},
+  journal={arXiv preprint arXiv:1804.00891},
   year={2018}
 }
 ```
