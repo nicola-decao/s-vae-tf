@@ -2,7 +2,7 @@
 ### Tensorflow implementation of Hyperspherical Variational Auto-Encoders
 
 ## Overview
-This library contains a Tensorflow implementation of the hyperspherical variational auto-encoder, or S-VAE, as presented in [[1]](#citation)(http://arxiv.org/abs/1804.00891).
+This library contains a Tensorflow implementation of the hyperspherical variational auto-encoder, or S-VAE, as presented in [[1]](#citation)(http://arxiv.org/abs/1804.00891). Check also our blogpost (https://nicola-decao.github.io/s-vae).
 
 ## Dependencies
 
