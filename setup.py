@@ -11,7 +11,7 @@ setup(
     description='Tensorflow implementation of Hyperspherical Variational Auto-Encoders',
     license='MIT',
     keywords='tensorflow vae variational-auto-encoder von-mises-fisher  machine-learning deep-learning manifold-learning',
-    url='https://nicola-decao.github.io/s-vae/',
+    url='https://nicola-decao.github.io/s-vae-tf/',
     download_url='https://github.com/nicola-decao/SVAE',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.md')).read(),
     install_requires=['numpy', 'tensorflow>=1.7.0', 'scipy'],
