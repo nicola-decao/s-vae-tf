@@ -5,7 +5,7 @@ from setuptools import find_packages
 
 setup(
     name='hyperspherical_vae',
-    version='0.1.0',
+    version='0.1.1',
     author='Nicola De Cao, Tim R. Davidson, Luca Falorsi',
     author_email='nicola.decao@gmail.com',
     description='Tensorflow implementation of Hyperspherical Variational Auto-Encoders',

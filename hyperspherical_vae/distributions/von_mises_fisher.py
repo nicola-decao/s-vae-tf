@@ -153,15 +153,21 @@ class VonMisesFisher(distribution.Distribution):
         return z
 
     def __sample_w3(self, n, seed):
-        # This is not working!!  --> NaN
         shape = array_ops.concat(([n], self.batch_shape_tensor()[:-1], [1]), 0)
         u = random_ops.random_uniform(shape, dtype=self.dtype, seed=seed)
-        self.__w = 1 + math_ops.log(u + (1 - u) * math_ops.exp(-2 * self.scale)) / self.scale
+        self.__w = 1 + math_ops.reduce_logsumexp([math_ops.log(u), math_ops.log(1 - u) - 2 * self.scale], axis=0) / self.scale
         return self.__w
 
     def __sample_w_rej(self, n, seed):
         c = math_ops.sqrt((4 * (self.scale ** 2)) + (self.__mf - 1) ** 2)
-        b = (-2 * self.scale + c) / (self.__mf - 1)
+        b_true = (-2 * self.scale + c) / (self.__mf - 1)
+        
+        # using Taylor approximation with a smooth swift from 10 < scale < 11
+        # to avoid numerical errors for large scale
+        b_app = (self.__mf - 1) / (4 * self.scale)
+        s = gen_math_ops.minimum(gen_math_ops.maximum(0., self.scale - 10), 1.)
+        b = b_app * s + b_true * (1 - s)
+        
         a = (self.__mf - 1 + 2 * self.scale + c) / 4
         d = (4 * a * b) / (1 + b) - (self.__mf - 1) * math_ops.log(self.__mf - 1)
 

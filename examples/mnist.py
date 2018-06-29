@@ -43,6 +43,9 @@ class ModelVAE(object):
         :param x: placeholder for input
         :return: tuple `(z_mean, z_var)` with mean and concentration around the mean
         """
+        # dynamic binarization
+        x = tf.cast(tf.greater(x, tf.random_uniform(shape=tf.shape(x), dtype=x.dtype)), dtype=x.dtype)
+        
         # 2 hidden layers encoder
         h0 = tf.layers.dense(x, units=self.h_dim * 2, activation=self.activation)
         h1 = tf.layers.dense(h0, units=self.h_dim, activation=self.activation)
@@ -140,7 +143,7 @@ H_DIM = 128
 Z_DIM = 2
 
 # digit placeholder
-x = tf.placeholder(tf.float64, shape=(None, 784))
+x = tf.placeholder(tf.float32, shape=(None, 784))
 
 # normal VAE
 modelN = ModelVAE(x=x, h_dim=H_DIM, z_dim=Z_DIM, distribution='normal')
