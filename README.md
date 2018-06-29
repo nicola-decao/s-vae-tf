@@ -7,7 +7,7 @@ This library contains a Tensorflow implementation of the hyperspherical variatio
 ## Dependencies
 
 * **python>=3.6**
-* **tensorflow>=1.7.0**: http://tensorflow.org
+* **tensorflow>=1.7.0**: https://tensorflow.org
 * **scipy**: https://scipy.org
 
 ## Installation
@@ -19,12 +19,12 @@ $ python setup.py install
 ```
 
 ## Structure
-* [distributions](https://github.com/nicola-decao/s-vae/tree/master/hyperspherical_vae/distributions): Tensorflow implementation of the von Mises-Fisher and hyperspherical Uniform distributions. Both inherit from `tf.distributions.Distribution`.
-* [ops](https://github.com/nicola-decao/s-vae/tree/master/hyperspherical_vae/ops): Low-level operations used for computing the exponentially scaled modified Bessel function of the first kind and its derivative.
-* [examples](https://github.com/nicola-decao/s-vae/tree/master/examples): Example code for using the library within a Tensorflow project.
+* [distributions](https://github.com/nicola-decao/s-vae-tf/tree/master/hyperspherical_vae/distributions): Tensorflow implementation of the von Mises-Fisher and hyperspherical Uniform distributions. Both inherit from `tf.distributions.Distribution`.
+* [ops](https://github.com/nicola-decao/s-vae-tf/tree/master/hyperspherical_vae/ops): Low-level operations used for computing the exponentially scaled modified Bessel function of the first kind and its derivative.
+* [examples](https://github.com/nicola-decao/s-vae-tf/tree/master/examples): Example code for using the library within a Tensorflow project.
 
 ## Usage
-Please have a look into the [examples folder](https://github.com/nicola-decao/SVAE/tree/master/examples). We adapted our implementation to follow the structure of the recently proposed [Tensorflow Distribution library](https://www.tensorflow.org/api_docs/python/tf/distributions/Distribution), ([Dillon et al, 2017](https://arxiv.org/abs/1711.10604)).
+Please have a look into the [examples folder](https://github.com/nicola-decao/s-vae-tf/tree/master/examples). We adapted our implementation to follow the structure of the recently proposed [Tensorflow Distribution library](https://www.tensorflow.org/api_docs/python/tf/distributions/Distribution), ([Dillon et al, 2017](https://arxiv.org/abs/1711.10604)).
 
 Please cite [[1](#citation)] in your work when using this library in your experiments.
 
