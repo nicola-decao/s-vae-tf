@@ -57,7 +57,8 @@ class ModelVAE(object):
         elif self.distribution == 'vmf':
             # compute mean and concentration of the von Mises-Fisher
             z_mean = tf.layers.dense(h1, units=self.z_dim, activation=lambda x: tf.nn.l2_normalize(x, axis=-1))
-            z_var = tf.layers.dense(h1, units=1, activation=tf.nn.softplus)
+            # the `+ 1` prevent collapsing behaviors
+            z_var = tf.layers.dense(h1, units=1, activation=tf.nn.softplus) + 1
         else:
             raise NotImplemented
 
