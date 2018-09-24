@@ -4,6 +4,8 @@
 ## Overview
 This library contains a Tensorflow implementation of the hyperspherical variational auto-encoder, or S-VAE, as presented in [[1]](#citation)(http://arxiv.org/abs/1804.00891). Check also our blogpost (https://nicola-decao.github.io/s-vae).
 
+* You do not use Tensorflow? Take a look [here](https://github.com/nicola-decao/s-vae-pytorch) for a **pytorch** implementation!
+
 ## Dependencies
 
 * **python>=3.6**
