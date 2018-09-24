@@ -31,7 +31,7 @@ Please have a look into the [examples folder](https://github.com/nicola-decao/s-
 Please cite [[1](#citation)] in your work when using this library in your experiments.
 
 ## Sampling von Mises-Fisher
-To sample the von Mises-Fisher distribution we follow the rejection sampling procedure as outlined by [Ulrich, 1984](http://www.jstor.org/stable/2347441?seq=1#page_scan_tab_contents). This simulation pipeline is visualized below:
+To sample the von Mises-Fisher distribution we follow the rejection sampling procedure as outlined by [Ulrich, 1984](http://www.jstor.org/stable/2347441?seq=1#page_scan_tab_contents). This simulation pipeline is visualised below:
 
 <p align="center">
   <img src="https://i.imgur.com/aK1ze0z.png" alt="blog toy1"/>
