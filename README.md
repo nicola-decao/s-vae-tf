@@ -49,7 +49,7 @@ MIT
 ```
 [1] Davidson, T. R., Falorsi, L., De Cao, N., Kipf, T.,
 and Tomczak, J. M. (2018). Hyperspherical Variational
-Auto-Encoders. arXiv preprint arXiv:1804.00891.
+Auto-Encoders. 34th Conference on Uncertainty in Artificial Intelligence (UAI-18).
 ```
 
 BibTeX format:
@@ -61,7 +61,7 @@ BibTeX format:
           De Cao, Nicola and
           Kipf, Thomas and
           Tomczak, Jakub M.},
-  journal={arXiv preprint arXiv:1804.00891},
+  journal={34th Conference on Uncertainty in Artificial Intelligence (UAI-18)},
   year={2018}
 }
 ```
