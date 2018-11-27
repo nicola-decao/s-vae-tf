@@ -43,8 +43,6 @@ class ModelVAE(object):
         :param x: placeholder for input
         :return: tuple `(z_mean, z_var)` with mean and concentration around the mean
         """
-        # dynamic binarization
-        x = tf.cast(tf.greater(x, tf.random_uniform(shape=tf.shape(x), dtype=x.dtype)), dtype=x.dtype)
         
         # 2 hidden layers encoder
         h0 = tf.layers.dense(x, units=self.h_dim * 2, activation=self.activation)
@@ -161,15 +159,24 @@ print('##### Normal VAE #####')
 for i in range(1000):
     # training
     x_mb, _ = mnist.train.next_batch(64)
+    # dynamic binarization
+    x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+    
     session.run(optimizerN.train_step, {modelN.x: x_mb})
 
     # every 100 iteration plot validation
     if i % 100 == 0:
         x_mb = mnist.validation.images
+        # dynamic binarization
+        x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+        
         print(i, session.run({**optimizerN.print}, {modelN.x: x_mb}))
 
 print('Test set:')
 x_mb = mnist.test.images
+# dynamic binarization
+x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+    
 print_ = {**optimizerN.print}
 print_['LL'] = log_likelihood(modelN, optimizerN, n=100)
 print(session.run(print_, {modelN.x: x_mb}))
@@ -179,15 +186,24 @@ print('##### Hyper-spherical VAE #####')
 for i in range(1000):
     # training
     x_mb, _ = mnist.train.next_batch(64)
+    # dynamic binarization
+    x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+    
     session.run(optimizerS.train_step, {modelS.x: x_mb})
 
     # every 100 iteration plot validation
     if i % 100 == 0:
         x_mb = mnist.validation.images
+        # dynamic binarization
+        x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+        
         print(i, session.run({**optimizerS.print}, {modelS.x: x_mb}))
 
 print('Test set:')
 x_mb = mnist.test.images
+# dynamic binarization
+x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+    
 print_ = {**optimizerS.print}
 print_['LL'] = log_likelihood(modelS, optimizerS, n=100)
 print(session.run(print_, {modelS.x: x_mb}))
