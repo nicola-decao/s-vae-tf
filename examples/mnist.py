@@ -160,7 +160,7 @@ for i in range(1000):
     # training
     x_mb, _ = mnist.train.next_batch(64)
     # dynamic binarization
-    x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+    x_mb = (x_mb > np.random.random(size=x_mb.shape)).astype(np.float32)
     
     session.run(optimizerN.train_step, {modelN.x: x_mb})
 
@@ -168,14 +168,14 @@ for i in range(1000):
     if i % 100 == 0:
         x_mb = mnist.validation.images
         # dynamic binarization
-        x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+        x_mb = (x_mb > np.random.random(size=x_mb.shape)).astype(np.float32)
         
         print(i, session.run({**optimizerN.print}, {modelN.x: x_mb}))
 
 print('Test set:')
 x_mb = mnist.test.images
 # dynamic binarization
-x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+x_mb = (x_mb > np.random.random(size=x_mb.shape)).astype(np.float32)
     
 print_ = {**optimizerN.print}
 print_['LL'] = log_likelihood(modelN, optimizerN, n=100)
@@ -187,7 +187,7 @@ for i in range(1000):
     # training
     x_mb, _ = mnist.train.next_batch(64)
     # dynamic binarization
-    x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+    x_mb = (x_mb > np.random.random(size=x_mb.shape)).astype(np.float32)
     
     session.run(optimizerS.train_step, {modelS.x: x_mb})
 
@@ -195,14 +195,14 @@ for i in range(1000):
     if i % 100 == 0:
         x_mb = mnist.validation.images
         # dynamic binarization
-        x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+        x_mb = (x_mb > np.random.random(size=x_mb.shape)).astype(np.float32)
         
         print(i, session.run({**optimizerS.print}, {modelS.x: x_mb}))
 
 print('Test set:')
 x_mb = mnist.test.images
 # dynamic binarization
-x_mb = tf.cast(tf.greater(x_mb, tf.random_uniform(shape=tf.shape(x_mb), dtype=x_mb.dtype)), dtype=x_mb.dtype)
+x_mb = (x_mb > np.random.random(size=x_mb.shape)).astype(np.float32)
     
 print_ = {**optimizerS.print}
 print_['LL'] = log_likelihood(modelS, optimizerS, n=100)
